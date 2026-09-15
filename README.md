@@ -1,19 +1,61 @@
-# CITYVISION AI — PS 127 Dashboard
+# CITYVISION AI 🚔
 
-A front-end recreation of the supplied CITYVISION AI / Mumbai Police command-center reference image.
+### City-Wide AI Engine for Multi-Camera ANPR, Trajectory Tracking & Urban Traffic Analytics
 
-## Files
-- `index.html` — dashboard structure
-- `style.css` — complete visual styling
-- `script.js` — clock, navigation feedback, chart bars and buttons
+> **SECURE STREETS. SAFER CITIZENS.**
 
-## Run
-1. Open the folder in VS Code.
-2. Open `index.html` with Live Server, or double-click it.
-3. View it in Microsoft Edge.
+CITYVISION AI is an AI-powered urban traffic intelligence platform designed to transform multiple CCTV camera feeds into a centralized, searchable, and intelligent command-center system.
 
-## Icons
-Font Awesome is loaded from a CDN. Internet access is required for the icon font and Google Font.
+The platform combines **vehicle detection, ANPR/OCR, multi-object tracking, vehicle re-identification, trajectory reconstruction, traffic analytics, heatmaps, and incident alerts** into a unified dashboard.
 
-## Note
-The dashboard uses a shield-style placeholder emblem in the code. For an official deployment, replace it with the officially supplied Mumbai Police emblem asset according to the relevant branding/usage requirements.
+---
+
+## 🎯 Problem Statement
+
+### SIH Problem Statement 127
+
+Modern cities generate massive amounts of CCTV footage, but analyzing vehicles across multiple cameras remains challenging.
+
+Key challenges include:
+
+- Fragmented CCTV camera networks
+- Manual vehicle identification and monitoring
+- Difficulty tracking the same vehicle across multiple cameras
+- Lack of centralized ANPR-based vehicle intelligence
+- Limited visibility into vehicle movement trajectories
+- Difficulty identifying traffic patterns and abnormal activity
+- Large volumes of video requiring efficient processing
+
+---
+
+## 💡 Our Solution
+
+**CITYVISION AI** provides a centralized AI engine capable of processing multiple CCTV streams and converting them into actionable urban traffic intelligence.
+
+### Core Workflow
+
+```text
+CCTV Camera Feeds
+        ↓
+Vehicle Detection & Classification
+        ↓
+Number Plate Detection
+        ↓
+ANPR / OCR
+        ↓
+Multi-Object Tracking
+        ↓
+Vehicle Re-Identification
+        ↓
+Cross-Camera Correlation
+        ↓
+Trajectory Reconstruction
+        ↓
+Traffic & Density Analysis
+        ↓
+Incident Detection & Alerts
+        ↓
+Command Center Dashboard
+```
+
+
