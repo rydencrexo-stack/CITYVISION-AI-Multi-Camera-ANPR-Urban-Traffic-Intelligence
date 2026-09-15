@@ -1,0 +1,1502 @@
+:root {
+  --gold: #b4955f;
+  --gold-dark: #89651f;
+  --gold-light: #e8c77f;
+
+  --cream: #f7f0e3;
+  --white: #fffdf8;
+  --border: #ded0b8;
+
+  --black: #171717;
+  --text: #252525;
+  --muted: #6e6a63;
+
+  --green: #17a957;
+  --red: #e73430;
+}
+
+/* ================= GLOBAL ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  overflow-x: auto;
+}
+
+button,
+select {
+  font-family: inherit;
+}
+
+.dashboard {
+  min-width: 1280px;
+  min-height: 100vh;
+  display: flex;
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+  width: 194px;
+  min-height: 100vh;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  background: linear-gradient(180deg, #b4955f, #9a783f);
+
+  color: white;
+  z-index: 20;
+
+  overflow: hidden;
+}
+
+.sidebar-brand {
+  height: 104px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 10px;
+
+  gap: 9px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ACTUAL LOGO */
+
+.police-logo {
+  width: 58px;
+  height: 72px;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+}
+
+.brand-text h2 {
+  font-size: 15px;
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+.brand-text h2 span {
+  color: #fff0b2;
+}
+
+.brand-text p {
+  font-size: 6px;
+
+  margin-top: 5px;
+
+  white-space: nowrap;
+}
+
+/* NAVIGATION */
+
+.navigation {
+  padding-top: 10px;
+}
+
+.nav {
+  width: 100%;
+  height: 47px;
+
+  border: none;
+  background: transparent;
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 0 21px;
+
+  cursor: pointer;
+
+  font-size: 12px;
+
+  text-align: left;
+
+  transition: 0.2s;
+}
+
+.nav i {
+  width: 20px;
+  text-align: center;
+
+  font-size: 17px;
+}
+
+.nav:hover,
+.nav.active {
+  background: linear-gradient(90deg, #f0c96f, #d9af62);
+
+  color: #191919;
+}
+
+.nav.notification {
+  position: relative;
+}
+
+.nav.notification small {
+  position: absolute;
+
+  left: 35px;
+  top: 5px;
+
+  background: #e52f2f;
+
+  color: white;
+
+  border-radius: 50%;
+
+  width: 17px;
+  height: 17px;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 8px;
+}
+
+/* POLICE VISUAL */
+
+.police-visual {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 330px;
+
+  padding: 195px 20px 0;
+
+  background: linear-gradient(transparent, rgba(24, 19, 10, 0.85));
+}
+
+.police-person {
+  position: absolute;
+
+  top: 95px;
+  left: 48px;
+
+  font-size: 105px;
+
+  color: rgba(40, 34, 25, 0.7);
+}
+
+.police-visual h3 {
+  position: relative;
+
+  font-size: 14px;
+
+  line-height: 1.05;
+}
+
+.visual-text {
+  position: relative;
+
+  margin-top: 58px;
+
+  color: #ffe28d;
+
+  font-size: 10px;
+
+  line-height: 1.55;
+
+  letter-spacing: 1px;
+}
+
+/* ================= MAIN ================= */
+
+.main {
+  margin-left: 194px;
+
+  width: calc(100% - 194px);
+
+  min-width: 1086px;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+  height: 90px;
+
+  background: rgba(255, 253, 248, 0.96);
+
+  border-bottom: 1px solid var(--border);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 0 18px;
+
+  position: relative;
+}
+
+.header-title h1 {
+  font-size: 25px;
+
+  font-weight: 800;
+
+  letter-spacing: -1px;
+}
+
+.header-title h1 span {
+  color: #a6741b;
+}
+
+.header-title p {
+  margin-top: 4px;
+
+  color: #5e5a54;
+
+  font-size: 10px;
+}
+
+.problem {
+  font-size: 15px;
+
+  white-space: nowrap;
+
+  margin-left: 10px;
+}
+
+.problem strong {
+  color: #a16e15;
+
+  font-size: 18px;
+}
+
+.date-box {
+  margin-left: auto;
+
+  min-width: 132px;
+
+  padding: 8px 12px;
+
+  text-align: center;
+
+  border: 1px solid #d5c8b6;
+
+  border-radius: 8px;
+}
+
+.date-box span {
+  display: block;
+
+  font-size: 9px;
+}
+
+.date-box strong {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 12px;
+}
+
+.header-bell {
+  position: relative;
+
+  font-size: 22px;
+}
+
+.header-bell span {
+  position: absolute;
+
+  top: -8px;
+  right: -8px;
+
+  background: #e62e2e;
+
+  color: white;
+
+  font-size: 8px;
+
+  width: 17px;
+  height: 17px;
+
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+}
+
+.operator {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+}
+
+.operator-circle {
+  width: 40px;
+  height: 40px;
+
+  background: var(--gold);
+
+  color: white;
+
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  font-weight: 800;
+}
+
+.operator strong {
+  display: block;
+
+  font-size: 10px;
+}
+
+.operator small {
+  display: block;
+
+  font-size: 8px;
+
+  color: #6b665f;
+
+  margin-top: 3px;
+}
+
+.operator > i {
+  font-size: 9px;
+}
+
+.mumbai-title {
+  height: 90px;
+
+  min-width: 165px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #7c5b1b;
+
+  background: linear-gradient(90deg, transparent, rgba(206, 177, 121, 0.28));
+}
+
+.mumbai-title strong {
+  font-size: 11px;
+}
+
+.mumbai-title small {
+  font-size: 8px;
+
+  margin-top: 4px;
+}
+
+/* ================= CONTENT ================= */
+
+.content {
+  padding: 10px;
+}
+
+/* ================= KPI ================= */
+
+.kpi-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 10px;
+}
+
+.kpi-card {
+  min-height: 98px;
+
+  padding: 13px;
+
+  background: var(--white);
+
+  border: 1px solid var(--border);
+
+  border-radius: 9px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  box-shadow: 0 2px 8px rgba(85, 62, 25, 0.05);
+}
+
+.kpi-icon {
+  width: 54px;
+  height: 54px;
+
+  flex-shrink: 0;
+
+  background: #f1d7a4;
+
+  border-radius: 7px;
+
+  display: grid;
+  place-items: center;
+
+  color: #5e461d;
+
+  font-size: 23px;
+}
+
+.alert-card .kpi-icon {
+  background: #ffd7d5;
+
+  color: #db2e2e;
+}
+
+.kpi-card span {
+  display: block;
+
+  font-size: 10px;
+}
+
+.kpi-card h2 {
+  font-size: 25px;
+
+  margin: 3px 0;
+
+  line-height: 1.1;
+}
+
+.kpi-card p {
+  font-size: 8px;
+
+  color: var(--muted);
+}
+
+.kpi-card > b {
+  margin-left: auto;
+
+  font-size: 10px;
+
+  white-space: nowrap;
+}
+
+.green {
+  color: var(--green);
+}
+
+.red {
+  color: var(--red);
+}
+
+/* ================= GRIDS ================= */
+
+.top-grid {
+  display: grid;
+
+  grid-template-columns: 1.35fr 1.05fr 0.62fr;
+
+  gap: 10px;
+
+  margin-top: 10px;
+}
+
+.analytics-grid {
+  display: grid;
+
+  grid-template-columns: 1.08fr 0.8fr 0.8fr;
+
+  gap: 10px;
+
+  margin-top: 10px;
+}
+
+.bottom-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 280px;
+
+  gap: 10px;
+
+  margin-top: 10px;
+}
+
+/* ================= PANELS ================= */
+
+.panel {
+  background: rgba(255, 253, 248, 0.98);
+
+  border: 1px solid var(--border);
+
+  border-radius: 8px;
+
+  overflow: hidden;
+
+  box-shadow: 0 2px 8px rgba(91, 66, 26, 0.05);
+}
+
+.panel-header {
+  height: 38px;
+
+  padding: 0 11px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  border-bottom: 1px solid #e9decc;
+}
+
+.panel-header h3 {
+  font-size: 12px;
+}
+
+.panel-header h3 i {
+  color: #9e741d;
+
+  margin-right: 5px;
+}
+
+.panel-header select {
+  border: 1px solid #d7c9b6;
+
+  background: white;
+
+  border-radius: 5px;
+
+  padding: 5px 8px;
+
+  font-size: 9px;
+}
+
+.live-panel,
+.map-panel,
+.alerts-panel {
+  height: 365px;
+}
+
+/* ================= LIVE CAMERA ================= */
+
+.camera-view {
+  height: 327px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background: linear-gradient(
+    90deg,
+    #69716f,
+    #bbbab4 20%,
+    #5e6663 22% 78%,
+    #c4c1b8 80%,
+    #5d6561
+  );
+}
+
+.camera-view::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(rgba(255, 255, 255, 0.04), rgba(0, 0, 0, 0.12));
+}
+
+.camera-time,
+.camera-info {
+  position: absolute;
+
+  z-index: 10;
+
+  color: white;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  padding: 5px;
+
+  font-size: 10px;
+}
+
+.camera-time {
+  top: 8px;
+  left: 8px;
+}
+
+.camera-info {
+  top: 8px;
+  right: 8px;
+
+  text-align: right;
+
+  line-height: 1.4;
+}
+
+.road-lines {
+  position: absolute;
+
+  inset: 0;
+
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0 95px,
+    rgba(255, 255, 255, 0.8) 96px 99px
+  );
+
+  opacity: 0.65;
+}
+
+.vehicle {
+  position: absolute;
+
+  z-index: 5;
+
+  border: 2px solid #20b964;
+
+  border-radius: 6px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.vehicle-image {
+  color: #444;
+
+  font-size: 45px;
+}
+
+.vehicle span {
+  position: absolute;
+
+  bottom: -22px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  white-space: nowrap;
+
+  background: #0ba84b;
+
+  color: white;
+
+  padding: 4px 7px;
+
+  border-radius: 4px;
+
+  font-size: 9px;
+
+  font-weight: 700;
+}
+
+.main-car {
+  width: 125px;
+  height: 155px;
+
+  left: 31%;
+  bottom: 12%;
+
+  background: linear-gradient(145deg, #ffffff, #bfc1bd);
+}
+
+.second-car {
+  width: 86px;
+  height: 112px;
+
+  left: 68%;
+  bottom: 27%;
+
+  background: linear-gradient(145deg, #505754, #151817);
+}
+
+.second-car .vehicle-image {
+  color: #ddd;
+  font-size: 34px;
+}
+
+.truck {
+  width: 66px;
+  height: 90px;
+
+  left: 48%;
+  top: 13%;
+
+  background: linear-gradient(#858d88, #363a37);
+
+  border-color: #1768a7;
+}
+
+.truck span {
+  background: #1768a7;
+}
+
+.truck .vehicle-image {
+  color: #e5e5e5;
+  font-size: 32px;
+}
+
+.bike {
+  width: 55px;
+  height: 105px;
+
+  left: 8%;
+  bottom: 7%;
+
+  border-color: #ed3b36;
+
+  background: #222;
+}
+
+.bike .vehicle-image {
+  color: #ddd;
+  font-size: 36px;
+}
+
+.bike span {
+  background: #e22d2d;
+}
+
+/* ================= MAP ================= */
+
+.map {
+  height: 327px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(35deg, transparent 47%, #ffffff 48%, transparent 49%),
+    linear-gradient(120deg, transparent 47%, #c5d2c4 48%, transparent 49%),
+    #dce7dc;
+}
+
+.map::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: repeating-linear-gradient(
+    30deg,
+    transparent 0 38px,
+    rgba(110, 130, 110, 0.18) 39px 41px
+  );
+}
+
+.map-city {
+  position: absolute;
+
+  z-index: 3;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+.thane {
+  top: 35px;
+  right: 75px;
+}
+
+.borivali {
+  top: 62px;
+  left: 115px;
+}
+
+.bandra {
+  bottom: 55px;
+  left: 80px;
+}
+
+.kurla {
+  top: 200px;
+  left: 185px;
+}
+
+.dadar {
+  bottom: 72px;
+  left: 70px;
+}
+
+.navi {
+  bottom: 60px;
+  right: 40px;
+}
+
+.map svg {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 2;
+}
+
+.tracking-path {
+  fill: none;
+
+  stroke: #18c967;
+
+  stroke-width: 7;
+
+  stroke-linecap: round;
+}
+
+.map-marker {
+  position: absolute;
+
+  width: 17px;
+  height: 17px;
+
+  border-radius: 50%;
+
+  border: 4px solid white;
+
+  z-index: 5;
+
+  box-shadow: 0 2px 5px #777;
+}
+
+.marker-one {
+  left: 28%;
+  top: 33%;
+
+  background: #18bd60;
+}
+
+.marker-two {
+  left: 46%;
+  top: 53%;
+
+  background: #18bd60;
+}
+
+.marker-three {
+  left: 63%;
+  top: 63%;
+
+  background: #18bd60;
+}
+
+.marker-danger {
+  right: 28%;
+  bottom: 28%;
+
+  background: #ef302f;
+}
+
+.tracking-card {
+  position: absolute;
+
+  z-index: 6;
+
+  right: 24%;
+  top: 31%;
+
+  padding: 7px 9px;
+
+  background: #27321f;
+
+  color: white;
+
+  border: 1px solid #a6d542;
+
+  border-radius: 6px;
+}
+
+.tracking-card strong {
+  display: block;
+
+  color: #d8ef42;
+
+  font-size: 11px;
+}
+
+.tracking-card span {
+  display: block;
+
+  font-size: 8px;
+
+  margin-top: 2px;
+}
+
+.map h2 {
+  position: absolute;
+
+  z-index: 5;
+
+  bottom: 5px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  font-size: 25px;
+}
+
+/* ================= ALERTS ================= */
+
+.alerts-panel .panel-header a {
+  color: #8e6315;
+
+  font-size: 9px;
+
+  font-weight: 700;
+}
+
+.alert {
+  height: 65px;
+
+  display: grid;
+
+  grid-template-columns: 55px 1fr auto;
+
+  gap: 8px;
+
+  align-items: center;
+
+  padding: 6px 8px;
+
+  border-bottom: 1px solid #eee5d7;
+}
+
+.alert-image {
+  height: 49px;
+  width: 55px;
+
+  border-radius: 5px;
+
+  display: grid;
+  place-items: center;
+
+  background: linear-gradient(145deg, #888, #e4e0d6);
+
+  font-size: 24px;
+
+  color: #555;
+}
+
+.alert-image.bike-icon {
+  background: #d2d2d2;
+}
+
+.alert-image.dark {
+  background: linear-gradient(145deg, #111, #777);
+
+  color: #ddd;
+}
+
+.alert > div:nth-child(2) strong {
+  display: block;
+
+  font-size: 10px;
+}
+
+.alert > div:nth-child(2) small {
+  display: block;
+
+  font-size: 8px;
+
+  line-height: 1.45;
+
+  margin-top: 2px;
+}
+
+.alert > b {
+  max-width: 80px;
+
+  background: #e73531;
+
+  color: white;
+
+  border-radius: 5px;
+
+  padding: 4px;
+
+  font-size: 7px;
+
+  text-align: center;
+}
+
+/* ================= ANALYTICS ================= */
+
+.analytics-panel {
+  height: 190px;
+}
+
+.traffic-chart {
+  height: 125px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  gap: 4px;
+
+  padding: 12px 25px 0;
+}
+
+.traffic-bar {
+  flex: 1;
+
+  border-radius: 3px 3px 0 0;
+
+  background: linear-gradient(#f4a91a, #20ad69);
+}
+
+.chart-labels {
+  display: flex;
+
+  justify-content: space-around;
+
+  font-size: 8px;
+
+  color: #555;
+}
+
+/* DONUT */
+
+.distribution {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 13px;
+}
+
+.donut {
+  width: 116px;
+  height: 116px;
+
+  border-radius: 50%;
+
+  background: conic-gradient(
+    #2587e9 0 52%,
+    #20bd91 52% 80%,
+    #eaa526 80% 88%,
+    #d23b61 88% 95%,
+    #8b367d 95%
+  );
+
+  position: relative;
+
+  display: grid;
+  place-items: center;
+}
+
+.donut::after {
+  content: "";
+
+  position: absolute;
+
+  width: 72px;
+  height: 72px;
+
+  border-radius: 50%;
+
+  background: var(--white);
+}
+
+.donut div {
+  position: relative;
+
+  z-index: 2;
+
+  text-align: center;
+}
+
+.donut strong {
+  display: block;
+
+  font-size: 13px;
+}
+
+.donut small {
+  font-size: 8px;
+}
+
+.legend {
+  width: 100%;
+
+  font-size: 8px;
+}
+
+.legend p {
+  margin: 8px 0;
+}
+
+.legend i {
+  display: inline-block;
+
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  margin-right: 5px;
+}
+
+.legend b {
+  float: right;
+}
+
+.car-color {
+  background: #2587e9;
+}
+
+.two-color {
+  background: #20bd91;
+}
+
+.truck-color {
+  background: #eaa526;
+}
+
+.bus-color {
+  background: #d23b61;
+}
+
+.other-color {
+  background: #8b367d;
+}
+
+/* HEATMAP */
+
+.heatmap {
+  height: 151px;
+
+  position: relative;
+
+  background: linear-gradient(30deg, #b8d5bf, #e5e7c5 45%, #c7d9bc);
+
+  overflow: hidden;
+}
+
+.heatmap::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: repeating-linear-gradient(
+    30deg,
+    transparent 0 32px,
+    rgba(255, 255, 255, 0.8) 33px 35px
+  );
+}
+
+.hotspot {
+  position: absolute;
+
+  width: 60px;
+  height: 60px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    #e22d1f 0 8%,
+    #f5a21b 18%,
+    #dbe63a 38%,
+    transparent 70%
+  );
+
+  filter: blur(2px);
+}
+
+.hotspot.one {
+  top: 10px;
+  left: 35px;
+}
+
+.hotspot.two {
+  top: 42px;
+  right: 55px;
+}
+
+.hotspot.three {
+  bottom: 5px;
+  left: 100px;
+}
+
+.heat-label {
+  position: absolute;
+
+  z-index: 2;
+
+  font-size: 9px;
+
+  font-weight: 600;
+}
+
+.heat-label.a {
+  top: 40px;
+  left: 80px;
+}
+
+.heat-label.b {
+  top: 52px;
+  right: 75px;
+}
+
+.heat-label.c {
+  bottom: 32px;
+  left: 55px;
+}
+
+.heat-scale {
+  position: absolute;
+
+  z-index: 4;
+
+  right: 8px;
+  bottom: 6px;
+
+  background: rgba(255, 255, 255, 0.88);
+
+  padding: 5px;
+
+  font-size: 8px;
+}
+
+.heat-scale span {
+  display: inline-block;
+
+  width: 60px;
+  height: 7px;
+
+  margin: 0 4px;
+
+  border-radius: 5px;
+
+  background: linear-gradient(90deg, #43b94a, #f0ea21, #ef2c1f);
+}
+
+/* ================= TABLE ================= */
+
+.table-panel {
+  min-height: 188px;
+}
+
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  font-size: 8px;
+}
+
+th {
+  background: #f7f0e4;
+
+  color: #57524b;
+
+  text-align: left;
+
+  padding: 7px;
+}
+
+td {
+  padding: 6px;
+
+  border-bottom: 1px solid #eee5d7;
+}
+
+table button {
+  border: 1px solid #b8882d;
+
+  background: white;
+
+  border-radius: 4px;
+
+  padding: 3px 15px;
+
+  font-size: 8px;
+
+  cursor: pointer;
+}
+
+.status {
+  color: white;
+
+  border-radius: 12px;
+
+  padding: 3px 8px;
+
+  font-style: normal;
+
+  font-size: 8px;
+}
+
+.status.normal {
+  background: #65b63b;
+}
+
+.status.danger {
+  background: #ed3d35;
+}
+
+/* ================= VEHICLE DETAILS ================= */
+
+.details-panel {
+  padding-bottom: 10px;
+}
+
+.vehicle-photo {
+  height: 75px;
+
+  margin: 7px 9px;
+
+  border-radius: 6px;
+
+  display: grid;
+  place-items: center;
+
+  color: #f6f2e8;
+
+  font-size: 50px;
+
+  background: linear-gradient(135deg, #888780, #e8e5da);
+}
+
+.details-panel > h2 {
+  text-align: center;
+
+  font-size: 11px;
+
+  margin: 0 30px 7px;
+
+  padding: 5px;
+
+  background: white;
+
+  border: 1px solid #d5c6ad;
+
+  border-radius: 4px;
+}
+
+.vehicle-info {
+  margin: 0 10px;
+}
+
+.vehicle-info p {
+  display: flex;
+
+  justify-content: space-between;
+
+  font-size: 8px;
+
+  padding: 3px 0;
+
+  border-bottom: 1px solid #eee5d7;
+}
+
+.vehicle-info span {
+  color: #65615b;
+}
+
+.vehicle-info b {
+  font-weight: 600;
+}
+
+.trajectory {
+  width: calc(100% - 20px);
+
+  margin: 8px 10px 0;
+
+  padding: 8px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  background: #e5b95d;
+
+  font-weight: 700;
+
+  font-size: 9px;
+
+  cursor: pointer;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  height: 34px;
+
+  background: #fffdf8;
+
+  border-top: 1px solid var(--border);
+
+  padding: 9px 20px;
+
+  font-size: 9px;
+}
+
+footer strong {
+  font-size: 11px;
+}
+
+footer span {
+  margin: 0 7px;
+
+  color: #a4751d;
+}
+
+footer b {
+  float: right;
+
+  font-weight: 500;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1400px) {
+  .header-title p {
+    display: none;
+  }
+
+  .mumbai-title {
+    display: none;
+  }
+
+  .header {
+    gap: 12px;
+  }
+
+  .kpi-card h2 {
+    font-size: 21px;
+  }
+}
