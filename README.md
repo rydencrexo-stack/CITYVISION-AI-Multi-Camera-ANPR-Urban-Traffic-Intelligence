@@ -59,31 +59,3 @@ Command Center Dashboard
 ```
 
 
-### GitHub About section
-
-Use this as the **Repository description**:
-
-> **AI-powered multi-camera ANPR and urban traffic intelligence platform for vehicle detection, tracking, trajectory reconstruction, traffic analytics, and intelligent incident alerts.**
-
-### Suggested GitHub Topics
-
-```text
-cityvision-ai
-anpr
-automatic-number-plate-recognition
-computer-vision
-yolo
-opencv
-vehicle-tracking
-vehicle-reidentification
-traffic-analytics
-cctv
-video-analytics
-smart-city
-artificial-intelligence
-machine-learning
-smart-india-hackathon
-sih
-mumbai
-```
-
